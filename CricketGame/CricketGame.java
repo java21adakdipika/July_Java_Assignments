@@ -4,9 +4,9 @@ import java.util.Random;
 public class CricketGame {
 
 	public static void main(String[] args) {
-            Scanner sc = new Scanner(System.in);
-            
-            Random random = new Random();
+        Scanner sc = new Scanner(System.in);
+        Random random = new Random();
+        int decision = 1;
             
         while (decision==1){
             
@@ -21,8 +21,13 @@ public class CricketGame {
             int roundOne = 0;
             int roundTwo = 0;
 
+            System.out.print("Enter 1 to START the game or 0 to EXIT: ");
+            decision = sc.nextInt();
+            if (decision == 0){
+                break;
+            }
         
-            System.out.print("Enter 1st player name: ");
+            System.out.print("\nEnter 1st player name: ");
             String playerOne = sc.next();
             System.out.print("Enter 2nd player name: ");
             String playerTwo = sc.next();
