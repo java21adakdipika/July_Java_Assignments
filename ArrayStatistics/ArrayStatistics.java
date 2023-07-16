@@ -1,66 +1,88 @@
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 
 public class ArrayStatistics {
 
-    public static void main(String[] args) {
-        if (args.length == 0) {
-            System.out.println("Please provide command line arguments.");
-            return;
-        }
+ public static void main(String[] args) {
 
-        int[] numbers = new int[args.length];
-        for (int i = 0; i < args.length; i++) {
-            try {
-                numbers[i] = Integer.parseInt(args[i]);
-            } catch (NumberFormatException e) {
-                System.out.println("Error: Integer values Only.");
-                return;
-            }
-        }
+  System.out.println("Array Elements : ");
+  for (int i = 0; i < args.length; i++) {
+    System.out.println(args[i]);
+  }
 
-        int sum = 0;
-        int min = numbers[0];
-        int max = numbers[0];
-        for (int num : numbers) {
-            sum += num;
-            if (num < min) {
-                min = num;
-            }
-            if (num > max) {
-                max = num;
-            }
-        }
+  sumofArrayElements(args);
+  averageOfArrayElements(args);
+  minArrayElements(args);
+  maxArrayElements(args);
+  meanofArrayElements(args);
+  medianOfArrayElements(args);
 
-        double average = (double) sum / numbers.length;
+ }
 
-        // Finding the median
-        Arrays.sort(numbers);
-        double median;
-        if (numbers.length % 2 == 0) {
-            int mid = numbers.length / 2;
-            median = (double) (numbers[mid - 1] + numbers[mid]) / 2;
-        } else {
-            int mid = numbers.length / 2;
-            median = numbers[mid];
-        }
+ private static void medianOfArrayElements(String[] args) {
+  Arrays.sort(args);
+  int number = args.length;
+  double sum = 0;
+  double median = 0;
+  if (number % 2 != 0) {
+   sum = Integer.parseInt(args[number / 2]);
+  }
+  median = Integer.parseInt(args[number - 1]/2) + Integer.parseInt(args[number / 2]) / 2.0;
+  System.out.println("Medain of Array Elements : " + median);
 
-        Map<Integer, Integer> frequencyMap = new HashMap<>();
-        for (int num : numbers) {
-            frequencyMap.put(num, frequencyMap.getOrDefault(num, 0) + 1);
-        }
+ }
 
-        // Displaying results
-        System.out.println("Array: " + Arrays.toString(numbers));
-        System.out.println("Sum: " + sum);
-        System.out.println("Average: " + average);
-        System.out.println("Min: " + min);
-        System.out.println("Max: " + max);
-        System.out.println("Median: " + median);
-        System.out.println("Frequency of each number:");
-        for (Map.Entry<Integer, Integer> entry : frequencyMap.entrySet()) {
-            System.out.println(entry.getKey() + ": " + entry.getValue());
-        }
-    }
+ private static void meanofArrayElements(String[] args) {
+  // TODO Auto-generated method stub
+  int sum = 0;
+  double mean = 0;
+  for (int i = 0; i < args.length; i++) {
+   sum += Integer.parseInt(args[i]);
+  }
+  mean = sum / args.length;
+  System.out.println("Mean of Array Elements :" + mean);
+
+ }
+
+ private static void maxArrayElements(String[] args) {
+  // TODO Auto-generated method stub
+  int max = Integer.parseInt(args[0]);
+  for (int i = 0; i < args.length; i++) {
+   if (Integer.parseInt(args[i]) > max) {
+    max = Integer.parseInt(args[i]);
+   }
+  }
+  System.out.println("Maximum Elements in Array Elements " + max);
+ }
+
+ private static void minArrayElements(String[] args) {
+  // TODO Auto-generated method stub
+  int min = Integer.parseInt(args[0]);
+  for (int i = 0; i < args.length; i++) {
+   if (Integer.parseInt(args[i]) < min) {
+    min = Integer.parseInt(args[i]);
+   }
+  }
+  System.out.println("Minimum Element in Array Elements :" + min);
+
+ }
+
+ private static void averageOfArrayElements(String[] args) {
+  int sum = 0;
+  double avg = 0;
+  int length = args.length;
+  for (int i = 0; i < args.length; i++) {
+   sum += Integer.parseInt(args[i]);
+  }
+  avg = sum / length;
+  System.out.println("Average of Array Elements : " + avg);
+ }
+
+ private static void sumofArrayElements(String[] args) {
+  int sum = 0;
+  for (int i = 0; i < args.length; i++) {
+   sum += Integer.parseInt(args[i]);
+  }
+  System.out.println("Sum of Array Elements : " + sum);
+ }
+
 }
