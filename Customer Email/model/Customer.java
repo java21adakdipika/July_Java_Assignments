@@ -7,18 +7,6 @@ public class Customer {
 	private String emailId;
 	private String password;
 	
-	
-	public Customer(int custId, String name, String emailId, String password) {
-		super();
-		this.custId = custId;
-		this.name = name;
-		this.emailId = emailId;
-		this.password = password;
-	}
-	
-	public Customer() {
-		super();
-	}
 	public int getCustId() {
 		return custId;
 	}
