@@ -1,11 +1,12 @@
-package numberGreeser;
+package assignments;
 
 import java.util.Scanner;
 import java.util.Random;
 
-public class NumberGreeser {
+public class NumberGuesser {
 
 	public static void main(String[] args) {
+		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 		Random random = new Random();
 		
