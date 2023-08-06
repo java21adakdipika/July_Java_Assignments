@@ -18,7 +18,7 @@ public class Car extends FourWheeler{
 
 	@Override
 	public String toString() {
-		return "[Car]\nmodel: " + this.model + ",\nNumber of Tyres: " + this.NO_OF_TYRES + ",\nColor: " + this.color + ",\nMile-Age: " + this.mileage + ",\nPrice: " + this.price;
+		return "[Car]\nCompany Name: " + this.companyName + "\nmodel: " + this.model + ",\nNumber of Tyres: " + this.NO_OF_TYRES + ",\nColor: " + this.color + ",\nMile-Age: " + this.mileage + ",\nPrice: " + this.price;
 	}
 	
 	
