@@ -2,15 +2,12 @@ package vehicle.model;
 
 public class Car extends FourWheeler{
 
-	public Car(int speed, String model, String color, int seats) {
-		super(speed, model, color, seats);
+	private int price;
+	
+	public Car(String companyName, String model, String color, int speed, int mileage, int price) {
+		super(companyName, model, color, speed, mileage);
+		this.price = price;
 		// TODO Auto-generated constructor stub
-	}
-
-	@Override
-	public String moving() {
-		// TODO Auto-generated method stub
-		return "Car - model no. " + this.model + " is moving";
 	}
 
 	@Override
@@ -21,7 +18,7 @@ public class Car extends FourWheeler{
 
 	@Override
 	public String toString() {
-		return "[Car]\nmodel: " + this.model + ",\nNumber of Tyres: " + this.noOfTyres + ",\nColor: " + this.color + ",\nNo. of seats: " + this.seats;
+		return "[Car]\nmodel: " + this.model + ",\nNumber of Tyres: " + this.NO_OF_TYRES + ",\nColor: " + this.color + ",\nMile-Age: " + this.mileage + ",\nPrice: " + this.price;
 	}
 	
 	

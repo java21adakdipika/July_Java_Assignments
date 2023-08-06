@@ -4,12 +4,14 @@ public abstract class Vehicle {
 	protected String model;
 	protected String color;
 	protected int speed;
+	protected String companyName;
 	
-	public Vehicle(int speed, String model, String color) {
+	public Vehicle(String companyName, String model, String color, int speed) {
 		super();
 		this.speed = speed;
 		this.model = model;
 		this.color = color;
+		this.companyName = companyName;
 	}
 
 
@@ -28,8 +30,6 @@ public abstract class Vehicle {
 	public void setColor(String color) {
 		this.color = color;
 	}
-	
-	public abstract String moving();
 	
 	public abstract String speedinkmperhr();
 	
