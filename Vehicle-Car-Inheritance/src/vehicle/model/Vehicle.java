@@ -14,7 +14,6 @@ public abstract class Vehicle {
 		this.companyName = companyName;
 	}
 
-
 	public String getModel() {
 		return model;
 	}
@@ -30,7 +29,29 @@ public abstract class Vehicle {
 	public void setColor(String color) {
 		this.color = color;
 	}
+
+	public int getSpeed() {
+		return speed;
+	}
+
+	public void setSpeed(int speed) {
+		this.speed = speed;
+	}
+
+	public String getCompanyName() {
+		return companyName;
+	}
+
+	public void setCompanyName(String companyName) {
+		this.companyName = companyName;
+	}
 	
+//	public String speedinkmperhr() {
+//		// TODO Auto-generated method stub
+//		return "Car is moving at the speed of";
+//	}
+
+
 	public abstract String speedinkmperhr();
 	
 	

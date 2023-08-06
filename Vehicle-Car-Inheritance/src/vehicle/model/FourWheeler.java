@@ -2,7 +2,7 @@ package vehicle.model;
 
 public abstract class FourWheeler extends Vehicle{
 	
-	protected final int NO_OF_TYRES = 4; 
+	protected static final int NO_OF_TYRES = 4; 
 	protected int mileage;
 	
 
